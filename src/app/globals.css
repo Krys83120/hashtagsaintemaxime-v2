@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sm-cream text-sm-deep;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-sm-turquoise text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-sm-turquoise text-white font-semibold rounded-xl 
+           hover:bg-sm-turquoiseDark transition-all duration-300 hover:shadow-lg hover:shadow-sm-turquoise/25 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-sm-turquoise text-sm-turquoise 
+           font-semibold rounded-xl hover:bg-sm-turquoise hover:text-white transition-all duration-300;
+  }
+
+  .btn-red {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-sm-red text-white font-semibold rounded-xl 
+           hover:bg-sm-redDark transition-all duration-300 hover:shadow-lg;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-sm-deep font-semibold rounded-xl 
+           hover:bg-sm-cream transition-all duration-300 border border-gray-200;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, #00D4FF 0%, #00B8E0 50%, #1A1A1A 100%);
+  }
+
+  .gradient-turquoise {
+    background: linear-gradient(135deg, #00D4FF 0%, #4DE3FF 100%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sm-turquoise to-sm-sand;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-sm-deep/80 backdrop-blur-md border border-white/10;
+  }
+
+  .animate-count {
+    animation: countUp 2s ease-out forwards;
+  }
+
+  /* Logo style */
+  .logo-text {
+    @apply font-display font-black tracking-tighter;
+  }
+
+  .logo-hash {
+    @apply text-sm-white stroke-sm-black;
+    -webkit-text-stroke: 2px #1A1A1A;
+    text-shadow: 2px 2px 0px #1A1A1A;
+  }
+
+  .logo-brand {
+    @apply text-sm-turquoise;
+  }
+
+  .logo-lifestyle {
+    @apply font-script text-sm-deep;
+  }
+
+  .logo-heart {
+    @apply text-sm-red animate-heart-beat;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
